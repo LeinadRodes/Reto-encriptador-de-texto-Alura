@@ -106,11 +106,11 @@ btn_Desencriptar.addEventListener("click",e=>{
     }
 
     else {
-        texto=texto.replace(/e/mg,"e");//durante la liena de texto la palabra E sera remplazada por la palabra enter
-        texto=texto.replace(/i/mg,"i");
-        texto=texto.replace(/a/mg,"a");
-        texto=texto.replace(/o/mg,"o");
-        texto=texto.replace(/u/mg,"u");
+        texto = texto.replace(/enter/mg, "e");
+        texto = texto.replace(/imes/mg, "i");
+        texto = texto.replace(/ai/mg, "a");
+        texto = texto.replace(/ober/mg, "o");
+        texto = texto.replace(/ufat/mg, "u");
         //AHORA BUSCAREMOS QUE EL MENSAJE QUEDE REGISTRADO DENTRO DE NUESTRO TEXT AREA DE LA DERECHA QUE SERA LO QUE VEREMOS DE ACA EN ADELANTE
         mensaje_Respuesta.innerHTML=texto;
         contenido_Tarjeta.remove();
