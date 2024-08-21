@@ -1,0 +1,407 @@
+
+:root{
+    --color_fondo:#f3f5fc;
+    --primer_Color_Tipografia:#011C26;
+    --White:#FFFFFF;
+    --color_Claro_Cajas:#f3ecde;
+    --naranja_Base:#CF2819;
+    --morado_Medio:#827597;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-style: normal;
+    font-family: Alurafont;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    gap: 20px;
+}
+::selection{ /* escoge el color que nosotros demos a el elemento que seleccionemos */
+    background: var(--primer_Color_Tipografia);
+    color: var(--White);
+}
+.img{
+    max-width: 100%;
+}
+body,html{
+    /* width: 100%; */
+    height: 100%;
+    background-image: linear-gradient(to right top, #011c26, #01232e, #012b36, #00333d, #003b45, #073e4c, #114252, #1a4558, #2c435a, #3b4159, #473f55, #503e4f);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+header{
+    position: absolute;
+    margin: 40px 0 0 40px;
+
+}
+header.logo_Alura{
+    align-items: flex-start;
+    display:flex;
+    width: 120px;
+    height: 48px;
+}
+
+/* :: representa un pseudoelemento  permiten agregar contenido o estilos a partes específicas de un elemento HTML sin necesidad de modificar directamente su contenido. */
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+.encriptador{
+    width: 60%;
+    background: transparent;
+    margin: 168px 0 0 240px;
+}
+.ingresar_Texto_Encriptar{
+    background-color: var(--color_Claro_Cajas);
+    width: 900px;
+    height: 500px;
+    padding: 20px;
+    margin: 168px 0 0 0 240px;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 12px;
+    resize: none;/* deshabilita el cambio de tamaño */
+    box-shadow: 0 0 50px 10px var(--primer_Color_Tipografia);
+}
+textarea::-webkit-scrollbar {
+    display: none;/* Desaparece el display de desplazamiento*/
+}
+.ingresar_Texto_Encriptar::placeholder,:focus{ /*Esto se aplica cuando el elemento está en estado de enfoque, es decir, cuando el usuario hace clic o interactúa con él. */
+    color: var(--primer_Color_Tipografia);
+}
+.icono_Aviso {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    margin: 0;
+    width: 20px;
+    gap: 8px; 
+    position: absolute;
+    top: 720px; /* Ajusta la posición vertical según tus necesidades */
+    left:12%;
+}
+.texto_Aviso{
+    margin-top: 20px 0 10px 0;
+    width: 100%;
+    font-size: 15px;
+    line-height: 18px;
+    opacity: 80%;
+    color: var(--White);
+}
+.botones_Encriptar_Desencriptar{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap:255px;
+    position: absolute;
+    top:526px
+}
+.boton_Encriptar{
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    /* padding: 24px; */
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 19.36px;
+    align-items: center;
+    color:var(--White);
+    background-color: var(--naranja_Base);
+    margin-top: 226px;
+}
+.boton_Encriptar:active{ /* Accion cuando el boton se activa */
+    box-shadow: inset 2px 2px 4px #011C26;
+    inset: -3px -4px 8px #011C26;
+    color:#F2E9CE;
+}
+.boton_Desencriptar{
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    /* padding: 24px; */
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 19.36px;
+    align-items: center;
+    color:rgb(255, 255, 255);
+    background-color:#00464F;
+    margin-top: 226px;
+}
+.boton_Copiar:active,
+.boton_Desencriptar:active{ /* Accion cuando el boton se activa */
+    box-shadow: inset 2px 2px 4px #011C26;
+    inset: -3px -4px 8px #011C26;
+    color:var(--color_Claro_Cajas);
+}
+
+.tarjeta_Contenedor{
+    width: 430px; /* probe 270*/
+    height: 780px;/*probe 580*/
+    margin-right: 60px;
+    background-color: #f3ecde;
+    border-radius: 32px;
+    box-shadow: 0 0 20px 10px var(--primer_Color_Tipografia);
+    position:relative;
+    margin-top: 20px;
+    text-align: center;
+}
+.tarjeta{
+    width:250px ;
+    margin-top: 50%;
+}
+.personaje_Alura{
+    margin-top: 200px;
+    width: 300px;
+    height: 300px;
+}
+.primer_Mensaje_NoEncontrado{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+}
+.segundo_Mensaje_Encriptar{
+    margin: 20px;
+    opacity: 80%;
+    font-size: 16px;
+    font-style:normal ;
+    text-align: center;
+    line-height: 24px;
+}
+.mensaje{
+    width: 100%;
+    height: 485px;
+    position: absolute;
+    padding: 20px;
+    top:0;
+    left: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    background: transparent;
+    border-radius: 32px 32px 0 32px;
+    border: none;
+    resize: none;
+    color: #011C26 20%;
+}
+.mensaje:focus{
+    outline: none;
+}
+.boton_Copiar{
+    width: 224px;
+    height: 67px;
+    margin: 23px;
+    border-radius: 24px;
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    visibility:hidden;
+    padding: 24px;
+    font-size: 16px;
+    padding: 24px;
+    line-height: 19.36px;
+    cursor: pointer;
+    align-items: center;
+    color:rgb(255, 255, 255);
+    background-color:#503E4F;
+}
+.boton_Encriptar:hover,
+.boton_Desencriptar:hover,
+.boton_Copiar:hover{
+    transform: scale(0.97);
+}
+
+footer{
+    margin: 15px;
+    padding: 10px;
+    border-top: 10px;
+    color: white;
+    text-align: center;
+    height: 5px;
+    font-size: 22px;
+    font-weight: 400;
+}
+.Logo_Linked:hover,  /* EFECTO DEL BOTON */
+.Logo_Instagram:hover,/* EFECTO DEL BOTON */
+.Logo_GitHub:hover{/* EFECTO DEL BOTON */
+    color:var(--morado_Medio);
+    opacity: 60%;
+}
+.mensaje_Footer{
+    width: auto;
+    font-size: 20px;
+    color: var(--color_Claro_Cajas);
+}
+.Logo_GitHub,.Logo_Instagram,.Logo_Linked{
+    
+    margin: 15px 10px 0 10px ;
+    width: 50px;
+    height: 50Px;
+}
+/* PARTE RESPONSIVE ---------------------------_________________________________---------------------_____________________________________*/
+@media(max-width:1250px){
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .logo_Alura {
+        display: block;
+        margin: 0 auto; /* Esto centrará horizontalmente */
+        max-width: 100%; /* Asegura que no se desborde en dispositivos pequeños */
+    }
+    .icono_Aviso{
+        visibility: hidden;
+    }
+    .ingresar_Texto_Encriptar{
+        /* margin: 168px 0 0 0; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        /* width: 400px;
+        height: 500px; */
+    }
+    .botones_Encriptar_Desencriptar{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: inherit;
+        /* position: initial;
+        gap: 5px;
+        margin:0;
+        margin-top: 0; */
+    }
+    .boton_Encriptar,.boton_Desencriptar{
+        margin-top:0;
+        gap: 3px;
+        margin-left: 0;
+    }
+    .texto_Aviso{
+        margin-top: 20px;
+    }
+    .tarjeta_Contenedor{
+    /* width: 60%;
+    height: 60%; */
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 688px;
+    height: 133px; 
+    margin-left: 300px;
+    }
+    .tarjeta{
+        width: 688px;
+        height: 133px;
+        display: flex;
+        flex-direction: column;
+        align-items:flex-end;
+    }
+    .personaje_Alura{
+        visibility:hidden;
+    }
+    .primer_Mensaje_NoEncontrado{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+         margin-top: -480px; /* Ajusta este valor según tus necesidades */
+    }
+    .boton_Copiar{
+        position: inherit;
+        width: 100%;
+        margin: 150px 0 0 20px;
+    }
+    .mensaje{
+        width: 100%;
+        height: 200px;
+        padding: 2px;
+    } 
+    footer{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+    }
+    .mensaje_Footer{
+        margin:20px 0 0 0;
+        font-size: 15px;
+    }
+}
+@media(max-width:890px){
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .ingresar_Texto_Encriptar{
+        font-size: 24px;
+        margin: 168px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .botones_Encriptar_Desencriptar{
+        position: initial;
+        gap: 5px;
+        margin:0;
+        margin-top: 0;
+    }
+    .boton_Encriptar,.boton_Desencriptar{
+        margin-top: 10px;
+        width: 200px;
+        height: 80px;
+        gap:8px;
+    }
+    .tarjeta_Contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 133px;
+    }
+    .boton_Copiar{
+        position: inherit;
+        width: 100%;
+        margin: 150px 0 0 20px;
+    }
+    .personaje_Alura{
+        visibility:hidden;
+    }
+    .primer_Mensaje_NoEncontrado{
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+         margin-top: -480px; /* Ajusta este valor según tus necesidades */
+    }
+    .segundo_Mensaje_Encriptar{
+        font-size: 8.6px;
+    }
+    footer{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        margin: 0 0 0 200px;
+    }
+    .mensaje_Footer{
+        margin:35px 0 0 0 ;
+        font-size: 15px;
+    }
+}
