@@ -28,7 +28,7 @@ btn_Encriptar.addEventListener("click",e=>{
             aviso.removeAttribute("style");
         }, 1800);
     }
-    //el campo de texno no debe tener caracteres especiales 
+    //el campo de texto no debe tener caracteres especiales 
     else if (texto!==txt){
         aviso.style.background= "";
         aviso.style.color="";
@@ -50,7 +50,7 @@ btn_Encriptar.addEventListener("click",e=>{
     }
 
     else {
-        texto=texto.replace(/e/mg,"enter");//durante la liena de texto la palabra E sera remplazada por la palabra enter
+        texto=texto.replace(/e/mg,"enter");//durante la linea de texto la palabra E sera remplazada por la palabra enter
         texto=texto.replace(/i/mg,"imes");
         texto=texto.replace(/a/mg,"ai");
         texto=texto.replace(/o/mg,"ober");
@@ -74,7 +74,6 @@ btn_Desencriptar.addEventListener("click",e=>{
     let txt = texto.normalize("NFD").replace(/[$\.¿\?~!\¡@#%^&*()_|}\{[\]>\<:"`;,\u0300-\u036f']/g," ")
     // console.log(txt);
 
-
     if(texto==""){
         aviso.style.background= "";
         aviso.style.color="";
@@ -84,7 +83,7 @@ btn_Desencriptar.addEventListener("click",e=>{
             aviso.removeAttribute("style");
         }, 1800);
     }
-    //el campo de texno no debe tener caracteres especiales 
+    //el campo de texto no debe tener caracteres especiales 
     else if (texto!==txt){
         aviso.style.background= "";
         aviso.style.color="";
@@ -123,7 +122,6 @@ btn_Desencriptar.addEventListener("click",e=>{
 btn_Desencriptar.addEventListener("click",e=>{
     e.preventDefault();
 });
-
 //funcionalidad copiar
 btn_Copiar.addEventListener("click", (e) => {
     e.preventDefault();
