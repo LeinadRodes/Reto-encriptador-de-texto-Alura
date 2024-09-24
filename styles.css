@@ -1,4 +1,3 @@
-
 :root{
     --color_fondo:#f3f5fc;
     --primer_Color_Tipografia:#011C26;
@@ -9,6 +8,7 @@
 }
 
 *{
+    color: white;
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -29,12 +29,24 @@
 }
 body,html{
     /* width: 100%; */
-    height: 100%;
-    background-image: linear-gradient(to right top, #011c26, #01232e, #012b36, #00333d, #003b45, #073e4c, #114252, #1a4558, #2c435a, #3b4159, #473f55, #503e4f);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(45deg,#0D0126,#370359,#231422,#0D0D0D,#0C3640,#23394C,#503e4f);
+    background-size: 400% 400%;
+    animation: color 45s ease-in-out infinite;
 }
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
 header{
     position: absolute;
     margin: 40px 0 0 40px;
@@ -46,7 +58,6 @@ header.logo_Alura{
     width: 120px;
     height: 48px;
 }
-
 /* :: representa un pseudoelemento  permiten agregar contenido o estilos a partes específicas de un elemento HTML sin necesidad de modificar directamente su contenido. */
 
 main {
@@ -60,22 +71,24 @@ main {
     margin: 168px 0 0 240px;
 }
 .ingresar_Texto_Encriptar{
-    background-color: var(--color_Claro_Cajas);
+    background-color:rgb(243, 236, 221,0.1);
+    backdrop-filter:blur(10px);
     width: 900px;
     height: 500px;
     padding: 20px;
     margin: 168px 0 0 0 240px;
     outline: none;
-    border: 1px solid gray;
+    border: 1px solid white;
     border-radius: 12px;
     resize: none;/* deshabilita el cambio de tamaño */
-    box-shadow: 0 0 50px 10px var(--primer_Color_Tipografia);
+    box-shadow: 0 0 50px 15px black;
+    color: white;
 }
 textarea::-webkit-scrollbar {
     display: none;/* Desaparece el display de desplazamiento*/
 }
 .ingresar_Texto_Encriptar::placeholder,:focus{ /*Esto se aplica cuando el elemento está en estado de enfoque, es decir, cuando el usuario hace clic o interactúa con él. */
-    color: var(--primer_Color_Tipografia);
+    color:white;
 }
 .icono_Aviso {
     display: flex;
@@ -91,7 +104,7 @@ textarea::-webkit-scrollbar {
 .texto_Aviso{
     margin-top: 20px 0 10px 0;
     width: 100%;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 18px;
     opacity: 80%;
     color: var(--White);
@@ -108,13 +121,12 @@ textarea::-webkit-scrollbar {
     width: 328px;
     height: 67px;
     border-radius: 24px;
-    /* padding: 24px; */
     cursor: pointer;
     font-size: 24px;
     line-height: 19.36px;
     align-items: center;
     color:var(--White);
-    background-color: var(--naranja_Base);
+    background-color:#cc240b;
     margin-top: 226px;
 }
 .boton_Encriptar:active{ /* Accion cuando el boton se activa */
@@ -126,13 +138,12 @@ textarea::-webkit-scrollbar {
     width: 328px;
     height: 67px;
     border-radius: 24px;
-    /* padding: 24px; */
     cursor: pointer;
     font-size: 24px;
     line-height: 19.36px;
     align-items: center;
     color:rgb(255, 255, 255);
-    background-color:#00464F;
+    background-color:#13678A;
     margin-top: 226px;
 }
 .boton_Copiar:active,
@@ -144,21 +155,24 @@ textarea::-webkit-scrollbar {
 
 .tarjeta_Contenedor{
     width: 430px; /* probe 270*/
-    height: 780px;/*probe 580*/
+    height: auto;/*probe 580*/
     margin-right: 60px;
-    background-color: #f3ecde;
+    /* background-color: #f3ecde; */
     border-radius: 32px;
-    box-shadow: 0 0 20px 10px var(--primer_Color_Tipografia);
+    box-shadow: 0 0 50px 15px black;
     position:relative;
     margin-top: 20px;
     text-align: center;
+    background-color:rgb(243, 236, 221,0.2);
+    border: solid 1px white;
+    backdrop-filter:blur(1px);
 }
 .tarjeta{
     width:250px ;
     margin-top: 50%;
 }
 .personaje_Alura{
-    margin-top: 200px;
+    margin-top: 100px;
     width: 300px;
     height: 300px;
 }
@@ -168,6 +182,7 @@ textarea::-webkit-scrollbar {
     font-size: 24px;
     line-height: 28px;
     text-align: center;
+    color: white;
 }
 .segundo_Mensaje_Encriptar{
     margin: 20px;
@@ -176,14 +191,17 @@ textarea::-webkit-scrollbar {
     font-style:normal ;
     text-align: center;
     line-height: 24px;
+    color: white;
 }
 .mensaje{
-    width: 100%;
-    height: 485px;
+    min-width: 100%;
+    min-height: 485px;
     position: absolute;
     padding: 20px;
+    margin-left: 10px;
     top:0;
     left: 0;
+    margin: 10px;
     font-weight: 400;
     font-size: 24px;
     line-height: 36px;
@@ -191,13 +209,14 @@ textarea::-webkit-scrollbar {
     border-radius: 32px 32px 0 32px;
     border: none;
     resize: none;
-    color: #011C26 20%;
+    color: white 20%;
 }
 .mensaje:focus{
     outline: none;
+    color: white;
 }
 .boton_Copiar{
-    width: 224px;
+    min-width:90%;
     height: 67px;
     margin: 23px;
     border-radius: 24px;
@@ -206,13 +225,13 @@ textarea::-webkit-scrollbar {
     left: 0;
     visibility:hidden;
     padding: 24px;
-    font-size: 16px;
+    font-size: 0.7rem;
     padding: 24px;
     line-height: 19.36px;
     cursor: pointer;
     align-items: center;
     color:rgb(255, 255, 255);
-    background-color:#503E4F;
+    background-color:#134C61;
 }
 .boton_Encriptar:hover,
 .boton_Desencriptar:hover,
@@ -224,7 +243,6 @@ footer{
     margin: 15px;
     padding: 10px;
     border-top: 10px;
-    color: white;
     text-align: center;
     height: 5px;
     font-size: 22px;
@@ -237,6 +255,7 @@ footer{
     opacity: 60%;
 }
 .mensaje_Footer{
+    margin-top: 50px;
     width: auto;
     font-size: 20px;
     color: var(--color_Claro_Cajas);
@@ -254,6 +273,7 @@ footer{
         flex-direction: column;
         align-items: center;
         width: 100%;
+        /* height: auto; */
     }
     header {
         display: flex;
@@ -262,7 +282,7 @@ footer{
         max-width: 100%;
     }
     .logo_Alura {
-        display: block;
+        display: block; 
         margin: 0 auto; /* Esto centrará horizontalmente */
         max-width: 100%; /* Asegura que no se desborde en dispositivos pequeños */
     }
@@ -275,18 +295,13 @@ footer{
         flex-direction: column;
         align-items: center;
         width: 100%;
-        /* width: 400px;
-        height: 500px; */
     }
     .botones_Encriptar_Desencriptar{
         width: 100%;
         display: flex;
+        flex-direction:row;
         align-items: center;
         position: inherit;
-        /* position: initial;
-        gap: 5px;
-        margin:0;
-        margin-top: 0; */
     }
     .boton_Encriptar,.boton_Desencriptar{
         margin-top:0;
@@ -294,15 +309,13 @@ footer{
         margin-left: 0;
     }
     .texto_Aviso{
-        margin-top: 20px;
+        margin: 25px 0 25px 0;
     }
     .tarjeta_Contenedor{
-    /* width: 60%;
-    height: 60%; */
     display: flex;
     flex-direction: column;
     align-items:center;
-    width: 688px;
+    min-width:65%;
     height: 133px; 
     margin-left: 300px;
     }
@@ -320,7 +333,7 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
-         margin-top: -480px; /* Ajusta este valor según tus necesidades */
+        margin-top: -380px;
     }
     .boton_Copiar{
         position: inherit;
@@ -336,9 +349,10 @@ footer{
         display: flex;
         flex-direction:column;
         align-items: center;
+        margin: 0 0 0 200px;
     }
     .mensaje_Footer{
-        margin:20px 0 0 0;
+        margin:40px 0 0 0;
         font-size: 15px;
     }
 }
@@ -351,11 +365,11 @@ footer{
     }
     .ingresar_Texto_Encriptar{
         font-size: 24px;
-        margin: 168px 0 0 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
+        margin: 0;
     }
     .botones_Encriptar_Desencriptar{
         position: initial;
@@ -385,14 +399,15 @@ footer{
         visibility:hidden;
     }
     .primer_Mensaje_NoEncontrado{
-        font-size: 12px;
+        font-size: 0.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-         margin-top: -480px; /* Ajusta este valor según tus necesidades */
+         margin-top: -380px; /* Ajusta este valor según tus necesidades */
     }
     .segundo_Mensaje_Encriptar{
-        font-size: 8.6px;
+        margin: 5px 0 0 0 ;
+        font-size: 0.4rem;
     }
     footer{
         display: flex;
